@@ -9,7 +9,7 @@ pipeline{
         stage("check out"){
             steps{
                 script{
-                checkout([$class: 'GitSCM', branches: [[name: "${branchName}" ]], extensions: [], userRemoteConfigs: [[credentialsId: '06612214-df29-49c3-a66f-3a87df1f042e', url: '${srcUrl}']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/XavierZBZB/jenkins_java_pipeline']]])
                 }
             }
         }
